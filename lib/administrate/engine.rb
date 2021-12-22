@@ -2,7 +2,7 @@ require "datetime_picker_rails"
 require "jquery-rails"
 require "kaminari"
 require "momentjs-rails"
-require "sassc-rails"
+# require "sassc-rails"
 require "selectize-rails"
 require "sprockets/railtie"
 
@@ -22,12 +22,12 @@ module Administrate
     @@javascripts = []
     @@stylesheets = []
 
-    initializer "administrate.assets.precompile" do |app|
-      app.config.assets.precompile += [
-        "administrate/application.js",
-        "administrate/application.css",
-      ]
-    end
+    # initializer "administrate.assets.precompile" do |app|
+    #   app.config.assets.precompile += [
+    #     "administrate/application.js",
+    #     "administrate/application.css",
+    #   ]
+    # end
 
     def self.add_javascript(script)
       @@javascripts << script
